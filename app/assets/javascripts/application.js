@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sass-twbs
 //= require_tree .
