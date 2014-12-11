@@ -2,7 +2,6 @@
 # http://emberjs.com/guides/models/pushing-records-into-the-store/
 
 App.ApplicationStore = DS.Store.extend({
-
 })
 
 # Override the default adapter with the `DS.ActiveModelAdapter` which

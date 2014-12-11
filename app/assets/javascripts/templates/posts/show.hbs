@@ -1,5 +1,6 @@
+{{link-to 'Back' 'index'}}
 <article>
-  <h2>{{model.title}}</h2>
+  <h2>{{model.title}} <em>{{link-to 'Edit' 'posts.edit' model}}</em></h2>
   <p>{{model.body}}</p>
 </article>
 
@@ -12,6 +13,6 @@
   <form {{action "submit" on="submit"}}>
     <div>Write your own comment!</div>
     {{textarea value=comment required=true}}
-    <button type='submit'>Submit</button>
+    <button type='submit'>Create</button>
   </form>
 </section>

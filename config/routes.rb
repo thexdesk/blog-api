@@ -6,6 +6,8 @@ BlogApi::Application.routes.draw do
 
   root to: 'ember#index'
 
+  match '/*path', to: 'ember#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
