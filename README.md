@@ -1,4 +1,4 @@
-## Simple Emberjs blog CRUD app with Rails API backend
+## Simple Emberjs Blog App with Rails API
 
 Created for a presentation
 
@@ -40,8 +40,8 @@ $ mv app/assets/javascripts/application.js.coffee app/assets/javascripts/ember.j
 Explicitly require `ember.js.coffee` so that requiring order is under our
 control
 
-app/assets/javascripts/application.js
 ```js
+# app/assets/javascripts/application.js
 //= require ember
 ```
 Let's create a base controller for anchoring our Ember app. Note that we don't
@@ -51,8 +51,8 @@ include tags.
 One nice thing is that we can still use Rail's great asset pipeline for our
 Ember App.
 
-app/controllers/ember_controller.rb
 ```ruby
+# app/controllers/ember_controller.rb
 class EmberController < ApplicationController
   def index
     render text: '', layout: 'application'
@@ -62,8 +62,8 @@ end
 
 Anchor our application root to use the Ember controller we just created...
 
-config/routes.rb
 ```ruby
+# config/routes.rb
 root to: 'ember#index'
 ```
 
