@@ -1,0 +1,14 @@
+{{link-to 'Back' 'index'}}
+
+<form {{action "submit" on="submit"}}>
+  <h4>New Post</h4>
+  <div><label>
+    Title
+    {{input value=title required=true}}
+  </label></div>
+  <div><label>
+    Body
+    {{input value=body required=true}}
+  </label></div>
+  <button type='submit'>Create</button>
+</form>

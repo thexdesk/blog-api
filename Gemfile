@@ -10,6 +10,8 @@ gem 'active_model_serializers'
 gem 'strong_parameters'
 gem 'bootstrap-sass'
 
+gem 'ember-rails'
+gem 'ember-source'
 
 # Gems used only for assets and not required
 # in production environments by default.

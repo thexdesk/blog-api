@@ -4,6 +4,10 @@ BlogApi::Application.routes.draw do
     resources :comments, except: [:new, :edit]
   end
 
+  root to: 'ember#index'
+
+  match '/*path', to: 'ember#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

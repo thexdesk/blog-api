@@ -1,0 +1,22 @@
+{{link-to 'Back' 'index'}}
+<article>
+  <h2>
+    {{model.title}}
+    <em>{{link-to 'Edit' 'posts.edit' model}}</em>
+    <em><a href='#' {{action "delete" on="click"}}>Delete</a></em>
+  </h2>
+  <p>{{model.body}}</p>
+</article>
+
+<section class="comments">
+  <h4>Comments</h4>
+  {{#each comment in model.comments}}
+    <div>{{comment.body}}</div>
+  {{/each}}
+
+  <form {{action "submit" on="submit"}}>
+    <div>Write your own comment!</div>
+    {{textarea value=comment required=true}}
+    <button type='submit'>Create</button>
+  </form>
+</section>
