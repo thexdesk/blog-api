@@ -1,0 +1,9 @@
+<h2>Posts</h2>
+{{link-to 'Create new post' 'posts.create'}}
+
+{{#each post in controller}}
+<article>
+  <h4>{{#link-to 'posts.show' post.id}}{{post.title}}{{/link-to}}</h4>
+  <p>{{post.body}}</p>
+</article>
+{{/each}}
