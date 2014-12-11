@@ -26,27 +26,30 @@ $ bundle exec rails g ember:bootstrap --app-name="App"
 ```shell
 # Rename application.js.coffee to ember.js.coffee
 $ mv app/assets/javascripts/application.js.coffee app/assets/javascripts/ember.js.coffee
+```
 
-# Change require_tree to require ember
-$ vim app/assets/javascripts/application.js
+`app/assets/javascripts/application.js`
+```js
 //= require ember
 ```
 
 4. Integrate Rails to Ember
 
-```shell
-# Create Ember controller with #index
-$ vim app/controllers/ember_controller.rb
+`app/controllers/ember_controller.rb`
+```ruby
 class EmberController < ApplicationController
   def index
     render text: '', layout: 'application'
   end
 end
+```
 
-# Root application to ember#index
-$ vim config/routes.rb
+`config/routes.rb`
+```ruby
 root to: 'ember#index'
+```
 
+```shell
 # Delete public index.html
 $ rm public/index.html
 ```
