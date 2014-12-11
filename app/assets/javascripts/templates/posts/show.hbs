@@ -1,22 +1,25 @@
-{{link-to 'Back' 'index'}}
-<article>
-  <h2>
-    {{model.title}}
-    <em>{{link-to 'Edit' 'posts.edit' model class="btn btn-primary"}}</em>
-    <em><a class="btn btn-primary" href='#' {{action "delete" on="click"}}>Delete</a></em>
-  </h2>
-  <p>{{model.body}}</p>
-</article>
+{{partial "post"}}
+
+<hr style="clear: both;" />
 
 <section class="comments">
   <h4>Comments</h4>
-  {{#each comment in model.comments}}
-    <div>{{comment.body}}</div>
-  {{/each}}
 
-  <form {{action "submit" on="submit"}}>
-    <div>Write your own comment!</div>
-    {{textarea value=comment required=true}}
-    <button type='submit'>Create</button>
+  <div class="list-group">
+    {{#each comment in model.comments}}
+      <a href="#" class="list-group-item">
+        <p class="list-group-item-text">{{comment.body}}</p>
+      </a>
+    {{/each}}
+  </div>
+
+  <br />
+  <h4>Write your own comment!</h4>
+  <form role="form" {{action "submit" on="submit"}}>
+    <div class="form-group">
+      {{textarea value=comment required=true class="form-control"}}
+    </div>
+
+    <button type='submit' class="btn btn-default">Comment!</button>
   </form>
 </section>

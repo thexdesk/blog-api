@@ -1,0 +1,17 @@
+<article>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title pull-left"> {{#link-to 'posts.show' this}}{{title}}{{/link-to}} </h3>
+      <div class="pull-right">
+        <em>{{link-to 'Edit' 'posts.edit' this class="btn btn-primary btn-xs"}}</em>
+        <em><a class="btn btn-primary btn-xs" href='#' {{action "delete" on="click"}}>Delete</a></em>
+      </div>
+      <br style="clear: both;" />
+    </div>
+
+    <div class="panel-body">
+      {{body}}
+    </div>
+  </div>
+</article>
+

@@ -1,11 +1,10 @@
 <h2>Posts</h2>
 {{link-to 'Create new post' 'posts.create' class="btn btn-primary"}}
 
+<hr />
+
 <div class="row">
-  {{#each post in controller}}
-  <article class="col-sm-4">
-    <h4>{{#link-to 'posts.show' post.id}}{{post.title}}{{/link-to}}</h4>
-    <p>{{post.body}}</p>
-  </article>
+  {{#each controller}}
+    {{partial "post"}}
   {{/each}}
 </div>
