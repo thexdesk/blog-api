@@ -1,6 +1,10 @@
 {{link-to 'Back' 'index'}}
 <article>
-  <h2>{{model.title}} <em>{{link-to 'Edit' 'posts.edit' model}}</em></h2>
+  <h2>
+    {{model.title}}
+    <em>{{link-to 'Edit' 'posts.edit' model}}</em>
+    <em><a href='#' {{action "delete" on="click"}}>Delete</a></em>
+  </h2>
   <p>{{model.body}}</p>
 </article>
 
