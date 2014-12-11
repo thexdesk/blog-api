@@ -12,7 +12,7 @@ module Api
     end
 
     def create
-      if @comment = Comment.new(comment_params)
+      if @comment = Comment.create(comment_params)
         render json: @comment, status: :created
       else
         render json: errors, status: :unprocessable_entity
@@ -43,7 +43,7 @@ module Api
     end
 
     def comment_params
-      params.require(:comment).permit(:body)
+      params.require(:comment).permit(:post_id, :body)
     end
 
     def errors
