@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require ember_application
+//= require bootstrap-sass-twbs
 //= require_tree .

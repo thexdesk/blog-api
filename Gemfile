@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 gem 'rails', '3.2.17'
 
@@ -8,7 +9,7 @@ gem 'rails', '3.2.17'
 gem 'mysql2'
 gem 'active_model_serializers'
 gem 'strong_parameters'
-gem 'bootstrap-sass'
+gem 'rails-assets-bootstrap-sass-twbs'
 
 gem 'ember-rails'
 gem 'ember-source'
