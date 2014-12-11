@@ -28,14 +28,14 @@ $ bundle exec rails g ember:bootstrap --app-name="App"
 $ mv app/assets/javascripts/application.js.coffee app/assets/javascripts/ember.js.coffee
 ```
 
-`app/assets/javascripts/application.js`
+app/assets/javascripts/application.js
 ```js
 //= require ember
 ```
 
 4. Integrate Rails to Ember
 
-`app/controllers/ember_controller.rb`
+app/controllers/ember_controller.rb
 ```ruby
 class EmberController < ApplicationController
   def index
@@ -44,7 +44,7 @@ class EmberController < ApplicationController
 end
 ```
 
-`config/routes.rb`
+config/routes.rb
 ```ruby
 root to: 'ember#index'
 ```
