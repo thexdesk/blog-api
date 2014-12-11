@@ -2,8 +2,8 @@
 <article>
   <h2>
     {{model.title}}
-    <em>{{link-to 'Edit' 'posts.edit' model}}</em>
-    <em><a href='#' {{action "delete" on="click"}}>Delete</a></em>
+    <em>{{link-to 'Edit' 'posts.edit' model class="btn btn-primary"}}</em>
+    <em><a class="btn btn-primary" href='#' {{action "delete" on="click"}}>Delete</a></em>
   </h2>
   <p>{{model.body}}</p>
 </article>

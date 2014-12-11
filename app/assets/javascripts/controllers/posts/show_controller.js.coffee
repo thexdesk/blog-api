@@ -12,6 +12,9 @@ App.PostsShowController = Em.ObjectController.extend
       , =>
         alert 'Comment failed to save!'
 
+    edit: ->
+      @transitionToRoute('posts.edit', @get('model'))
+
     delete: ->
       @get('model').destroyRecord().then =>
         @transitionToRoute('index')
