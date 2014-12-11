@@ -9,6 +9,8 @@ gem 'mysql2'
 
 gem 'active_model_serializers'
 
+gem 'ember-rails'
+gem 'ember-source'
 
 # Gems used only for assets and not required
 # in production environments by default.
