@@ -12,7 +12,7 @@ module Api
     end
 
     def create
-      if @post = Post.new(post_params)
+      if @post = Post.create(post_params)
         render json: @post, status: :created
       else
         render json: errors, status: :unprocessable_entity
