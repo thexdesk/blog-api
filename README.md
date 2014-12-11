@@ -35,15 +35,26 @@ Ember app is initialized before our models/controllers/etc are loaded.
 
 ```shell
 # Rename application.js.coffee to ember.js.coffee
-$ mv app/assets/javascripts/application.js.coffee app/assets/javascripts/ember.js.coffee
+$ mv app/assets/javascripts/application.js.coffee app/assets/javascripts/ember_application.js.coffee
 ```
 Explicitly require `ember.js.coffee` so that requiring order is under our
 control
 
 ```js
 # app/assets/javascripts/application.js
-//= require ember
+...
+//= require ember_application
+//= require_tree .
 ```
+
+And let's get rid of a deprecation warning for using App.Store
+
+```coffee
+# app/assets/javascripts/store.js.coffee
+App.ApplicationStore = DS.Store.extend({
+...
+```
+
 Let's create a base controller for anchoring our Ember app. Note that we don't
 have to render anything except for the layout which will have our javascript
 include tags.
@@ -67,7 +78,7 @@ Anchor our application root to use the Ember controller we just created...
 root to: 'ember#index'
 ```
 
-And let's finish it off by deleting the public `index.html` fodder
+And let's finish it off by deleting the public `index.html`
 
 ```shell
 # Delete public index.html
