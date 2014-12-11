@@ -20,7 +20,7 @@ module Api
     end
 
     def update
-      if @post.update(post_params)
+      if @post.update_attributes(post_params)
         render nothing: true, status: :no_content
       else
         render json: errors, status: :not_found

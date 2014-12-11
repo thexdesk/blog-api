@@ -20,7 +20,7 @@ module Api
     end
 
     def update
-      if @comment.update(comment_params)
+      if @comment.update_attributes(comment_params)
         render nothing: true, status: :no_content
       else
         render json: errors, status: :not_found
