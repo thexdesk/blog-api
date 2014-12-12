@@ -6,4 +6,6 @@ App.Router.reopen
 App.Router.map () ->
   @resource 'posts', ->
     @route 'show', path: '/:post_id'
+    @route 'create'
+    @route 'edit', path: '/:post_id/edit'
 
